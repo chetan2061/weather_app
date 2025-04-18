@@ -1,0 +1,185 @@
+
+body {
+    /* Apply a background image with full coverage and ensure it remains fixed */
+    font-family: 'Poppins', sans-serif; /* Use a clean, modern font */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    background: url('https://img.freepik.com/free-vector/thunder-clouds-background-vector-green-with-glittery-cute-doodle-illustration-kids_53876-105742.jpg?t=st=1735451061~exp=1735454661~hmac=d72b44106680754aba662a4fb7113e9678c56fcad62615df1254f56651462fed&w=2000'); /* Set a fixed background image */
+    background-size: cover; /* Ensure the background covers the viewport */
+    color: #2d3436; /* Set a dark color for text for contrast */
+    min-height: 100px; /* Set the minimum height to the full viewport */
+    text-align: center; /* Center all text horizontally */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center child elements horizontally */
+    align-items: center; /* Center child elements vertically */
+}
+
+/* Full-Screen Container */
+.app-container {
+    /* Define the main container for the app */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    display: flex; /* Flex layout for alignment */
+    flex-direction: column; /* Stack child elements vertically */
+    justify-content: center; /* Center child elements within the container */
+    align-items: center; /* Align items to the center horizontally */
+    padding: 20px; /* Add padding around the container */
+    box-sizing: border-box; /* Include padding in the element's total width/height */
+}
+
+/* Search Section */
+#searchSection {
+    /* Styles the search section */
+    display: flex; /* Flex layout */
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 20px; /* Add spacing between the input and button */
+    margin-bottom: 30px; /* Space below the search section */
+    width: 100%; /* Full width */
+}
+
+.search-box {
+    /* Wrapper for input and dropdown */
+    position: relative; /* Needed to position dropdown relative to the input */
+    width: 80%; /* Input takes up 80% of the container width */
+    max-width: 600px; /* Maximum width of the input */
+}
+
+#cityInput {
+    /* Input field styles */
+    width: 100%; /* Full width of the parent container */
+    padding: 15px; /* Add padding for better usability */
+    border-radius: 30px; /* Rounded corners for input */
+    font-size: 100%; /* Slightly larger font for readability */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    color: #2d3436; /* Dark text color for contrast */
+    border: 1px solid #ccc; /* Light gray border */
+    outline: none; /* Remove the default outline */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    text-align: center; /* Center the placeholder text */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+#cityInput::placeholder {
+    /* Styling for placeholder text */
+    color: #7f8c8d; /* Light gray text for the placeholder */
+}
+
+#cityInput:focus {
+    /* Styling when input is focused */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Darker shadow when focused */
+    transform: scale(1.05); /* Slightly enlarge the input */
+    border-color: #27ae60; /* Change border color to green */
+}
+
+/* Dropdown Styling */
+#citySuggestions {
+    /* Dropdown list container */
+    margin-top: 5px; /* Space between input and dropdown */
+    width: 100%; /* Full width of the parent container */
+    position: absolute; /* Position relative to the parent */
+    top: 60px; /* Position below the input */
+    left: 0; /* Align with the input */
+    background: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+    color: #2d3436; /* Dark text color */
+    border-radius: 15px; /* Rounded corners for dropdown */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    overflow: hidden; /* Hide overflow content */
+    list-style: none; /* Remove default list styles */
+    padding: 0; /* Remove padding */ 
+    max-height: 200px; /* Limit height of dropdown */
+    
+    display: none; /* Hidden by default */
+}
+
+
+#searchButton {
+    /* Search button styles */
+    padding: 12px 30px; /* Add padding for a larger clickable area */
+    font-size: 1.2em; /* Increase font size */
+    border: none; /* Remove default border */
+    border-radius: 30px; /* Rounded corners */
+    background-color: #27ae60; /* Green background color */
+    color: white; /* White text */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+#searchButton:hover {
+    /* Hover effect for button */
+    background-color: #1e8449; /* Darker green background */
+    transform: scale(1.1); /* Slightly enlarge button */
+}
+
+
+
+h1 {
+    /* Main city name */
+    font-size: 3em; /* Large font size for prominence */
+    font-weight: bold; /* Make the text bold */
+    margin: 0; /* Remove margin */
+    color: #2d3436; /* Dark text color */
+}
+
+p {
+    /* Subheading text */
+    font-size: 1.3em; /* Medium font size */
+    font-style: italic; /* Italic text style */
+    color: #636e72; /* Light gray color */
+    margin: 10px 0 0; /* Add spacing above */
+}
+
+
+
+#weather-icon{
+    /* Styling for the weather icon */
+    width: 200px; /* Width of the icon */
+    height: 200px; /* Height of the icon */
+    margin-bottom: 20px; /* Add spacing below the icon */
+}
+
+
+ #main-weather{
+    /* Styling for the main weather text */
+    font-size: 40px; /* Large font size */
+    margin: 10px 0; /* Add spacing above and below */
+    color: #2d3436; /* Dark text color */
+    
+}
+
+#temperature{
+    /* Styling for the temperature text */
+    font-size: 45px; /* Very large font size */
+    font-weight: bold; /* Bold text */
+    margin: 0; /* Remove margin */
+    color: #121413; /* Green text color */
+}
+
+/* Weather Details Section */
+.details {
+    /* Styling for the details section */
+    display: flex; /* Flex layout */   
+    gap: 20px; /* Add spacing between items */
+    width: 100%; /* Full width */
+    max-width: 800px; /* Limit the maximum width */
+}
+
+.detail-item {
+    /* Styling for each detail item */
+    
+    align-items: center; /* Center items horizontally */
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent white background */
+    padding: 15px; /* Add padding around the item */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.detail-item:hover {
+    /* Hover effect for detail items */
+    transform: scale(1.1); /* Slightly enlarge item */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Darker shadow */
+}
+
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata about the document -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="chetan.css">
+
+    <!-- Link to FontAwesome library for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Main container for the Weather App -->
+    <div class="app-container">
+
+        <!-- Search Section -->
+        <section id="searchSection" class="search-section">
+            <!-- Search Box -->
+            <div class="search-box">
+                <!-- Input field for entering the city name -->
+                <input type="text" id="cityInput" placeholder="Enter city name">
+                
+            </div>
+
+            <!-- Search Button to fetch weather data -->
+            <button id="searchButton">Search</button>
+        </section>
+
+        <!-- Weather Information Section -->
+        <div class="weather-info-container">
+
+            <!-- Header Section -->
+            <header>
+                <!-- City Name -->
+                <h1 id="city">Bharatpur</h1>
+
+                <!-- Tagline displaying city weather description -->
+                <!-- <p id="city-tagline">"Current weather in Bharatpur, Nepal"</p> -->
+            </header>
+
+           
+
+            <!-- Main Weather Section -->
+            <section class="current-weather" id="main-weather-section">
+                <div class="weather-main">
+                    <!-- Weather Icon -->
+                    <img id="weather-icon" src="http://openweathermap.org/img/wn/04d@2x.png" alt="Weather Icon">
+
+                    <!-- Weather Description (e.g., Cloudy, Sunny) -->
+                    <p id="main-weather">Cloudy</p>
+
+                    <!-- Temperature -->
+                    <p id="temp">23°</p>
+                </div>
+            </section>
+
+            <!-- Weather Details Section -->
+            <section class="details">
+                <!-- Humidity Information -->
+                <div class="detail-item">
+                    <!-- Icon for Humidity -->
+                    <i class="fa-solid fa-droplet fa-3x" style="color: #3498db;"></i>
+                    <!-- Humidity Percentage -->
+                    <p>Humidity: <span id="humidity">47%</span></p>
+                </div>
+
+                <!-- Wind Speed Information -->
+                <div class="detail-item">
+                    <!-- Icon for Wind Speed -->
+                    <i class="fa-solid fa-wind fa-3x" style="color: #2ecc71;"></i>
+                    <!-- Wind Speed Value -->
+                    <p>Wind Speed: <span id="wind-speed">23 m/s</span></p>
+                </div>
+
+                <!-- Pressure Information -->
+                <div class="detail-item">
+                    <!-- Icon for Pressure -->
+                    <i class="fa-solid fa-gauge fa-3x" style="color: #e74c3c;"></i>
+                    <!-- Pressure Value -->
+                    <p>Pressure: <span id="pressure">1013 hPa</span></p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file for functionality -->
+    <script src="chetan.js"></script>
+</body>
+</html>
